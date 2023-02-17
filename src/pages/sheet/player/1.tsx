@@ -131,7 +131,7 @@ function PlayerSheet(props: PageProps) {
 						</Row>
 						<Row className='mb-3'>
 							<PlayerSkillContainer
-								title='Perícias'
+								title='Conhecimentos'
 								playerSkills={skills}
 								availableSkills={props.availableSkills}
 								skillDiceConfig={props.diceConfig.skill || props.diceConfig.base}
