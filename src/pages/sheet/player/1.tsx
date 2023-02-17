@@ -150,7 +150,7 @@ function PlayerSheet(props: PageProps) {
 						</Row>
 						<Row className='mb-3'>
 							<PlayerSpellContainer
-								title='Magias'
+								title='cu'
 								playerSpells={props.player.PlayerSpell.map((sp) => sp.Spell)}
 								availableSpells={props.availableSpells}
 								playerMaxSlots={props.player.spellSlots}
