@@ -112,7 +112,7 @@ function PlayerSheet(props: PageProps) {
 						</Row>
 						<hr />
 						<Row className='mb-3'>
-							<DataContainer outline title='Características'>
+							<DataContainer outline title='Abilidades'>
 								<PlayerCharacteristicContainer
 									playerCharacteristics={chars}
 									characteristicDiceConfig={
