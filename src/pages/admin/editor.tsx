@@ -49,7 +49,7 @@ export default function Admin2(props: InferSSRProps<typeof getSSP>) {
 						/>
 						<EquipmentEditorContainer equipments={props.equipment} title='Combate' />
 						<ItemEditorContainer items={props.item} title='Itens' />
-						<SpellEditorContainer spells={props.spell} title='Magias' />
+						<SpellEditorContainer spells={props.spell} title='---' />
 					</Row>
 				</ErrorLogger.Provider>
 			</Container>
