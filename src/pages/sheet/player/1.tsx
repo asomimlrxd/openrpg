@@ -148,14 +148,6 @@ function PlayerSheet(props: PageProps) {
 								partners={props.partners}
 							/>
 						</Row>
-						<Row className='mb-3'>
-							<PlayerSpellContainer
-								title='---'
-								playerSpells={props.player.PlayerSpell.map((sp) => sp.Spell)}
-								availableSpells={props.availableSpells}
-								playerMaxSlots={props.player.spellSlots}
-							/>
-						</Row>
 					</Container>
 				</Socket.Provider>
 			</ErrorLogger.Provider>
