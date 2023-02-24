@@ -62,7 +62,7 @@ export default function Register() {
 				<Row>
 					<Col>
 						<h1>
-							<label htmlFor='username'>Cadastro de Jogador</label>
+							<label htmlFor='username'>Registro de Jogador</label>
 						</h1>
 					</Col>
 				</Row>
@@ -81,7 +81,7 @@ export default function Register() {
 							<Col>
 								É o mestre?{' '}
 								<Link href='/register/admin'>
-									<a className={homeStyles.link}>Cadastrar-se como mestre</a>
+									<a className={homeStyles.link}>Registrar como mestre</a>
 								</Link>
 							</Col>
 						</Row>
