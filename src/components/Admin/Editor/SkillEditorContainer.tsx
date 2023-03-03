@@ -194,7 +194,7 @@ function SkillEditorContainer(props: SkillEditorContainerProps) {
 				xs={12}
 				lg={6}
 				outline
-				title='Perícias'
+				title='Conhecimentos'
 				addButton={{
 					onAdd: () => setSkillModal({ operation: 'create', show: true }),
 					disabled: loading,
