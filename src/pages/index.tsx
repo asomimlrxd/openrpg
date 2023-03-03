@@ -65,7 +65,7 @@ function HomePage() {
 
 		try {
 			if (username.length === 0 || password.length === 0)
-				throw new Error('Você deve preencher tanto o usuário como a senha.');
+				throw new Error('Tens de  preencher tanto o usuário como a senha.');
 			const res = await api.post('/login', { username, password });
 			if (res.data.admin) return Router.push('/admin/main');
 			Router.push('/sheet/player/1');
@@ -99,9 +99,9 @@ function HomePage() {
 				<LoginForm onSubmit={onFormSubmit} />
 				<Row>
 					<Col>
-						<span className='me-2'>Não possui cadastro?</span>
+						<span className='me-2'>Não tens conta?</span>
 						<Link href='/register' passHref>
-							<a className={styles.link}>Cadastrar-se</a>
+							<a className={styles.link}>Registra-te</a>
 						</Link>
 					</Col>
 				</Row>
