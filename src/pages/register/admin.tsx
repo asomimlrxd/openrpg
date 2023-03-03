@@ -70,7 +70,7 @@ export default function Register(
 
 	return (
 		<div>
-			<ApplicationHead title='Cadastro de Mestre' />
+			<ApplicationHead title='Registro de Mestre' />
 			<Container className='text-center mt-2'>
 				<Row>
 					<Col>
@@ -84,7 +84,7 @@ export default function Register(
 					<Col>
 						<Row className='my-3'>
 							<Col>
-								Já possui cadastro?{' '}
+								Já tens conta?{' '}
 								<Link href='/'>
 									<a className={homeStyles.link}>Entrar</a>
 								</Link>
@@ -92,7 +92,7 @@ export default function Register(
 						</Row>
 						<Row className='my-3'>
 							<Col>
-								É um jogador?{' '}
+								És um jogador?{' '}
 								<Link href='/register'>
 									<a className={homeStyles.link}>Cadastrar-se como jogador</a>
 								</Link>
@@ -189,7 +189,7 @@ function RegisterForm(props: {
 			<Row className='my-3 justify-content-center'>
 				<Col md={6}>
 					<Button type='submit' variant='secondary'>
-						Cadastrar-se
+						Registra-te
 					</Button>
 				</Col>
 			</Row>
