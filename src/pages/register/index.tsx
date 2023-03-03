@@ -71,7 +71,7 @@ export default function Register() {
 					<Col>
 						<Row className='my-3'>
 							<Col>
-								Já possui cadastro?{' '}
+								Já tens conta?{' '}
 								<Link href='/'>
 									<a className={homeStyles.link}>Entrar</a>
 								</Link>
@@ -79,7 +79,7 @@ export default function Register() {
 						</Row>
 						<Row className='my-3'>
 							<Col>
-								É o mestre?{' '}
+								És o mestre?{' '}
 								<Link href='/register/admin'>
 									<a className={homeStyles.link}>Registrar como mestre</a>
 								</Link>
