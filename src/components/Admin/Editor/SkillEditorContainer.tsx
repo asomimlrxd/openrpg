@@ -75,7 +75,7 @@ export default function SpecializationEditorContainer(
 				xs={12}
 				lg={6}
 				outline
-				title='Conhecimentos'
+				title='Proficiências'
 				addButton={{
 					onAdd: () => setSpecializationModal({ operation: 'create', show: true }),
 					disabled: loading,
