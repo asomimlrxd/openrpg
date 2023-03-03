@@ -555,7 +555,7 @@ export default function PlayerManager(props: PlayerManagerProps) {
 							</Row>
 							<hr />
 							<Row>
-								<Col className='h3'>Magias</Col>
+								<Col className='h3'>---</Col>
 							</Row>
 							<Row className='mb-2 h6'>
 								<Col>
