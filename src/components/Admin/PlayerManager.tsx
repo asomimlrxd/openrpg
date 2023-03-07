@@ -385,7 +385,6 @@ export default function PlayerManager(props: PlayerManagerProps) {
 									<Row>
 										<Col>Nome</Col>
 									</Row>
-								</Col>
 								{player.PlayerAttributes.length > 0 && (
 								<>
 									<Row>
