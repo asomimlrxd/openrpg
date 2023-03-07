@@ -386,21 +386,7 @@ export default function PlayerManager(props: PlayerManagerProps) {
 										<Col>Nome</Col>
 									</Row>
 								</Col>
-								{player.PlayerInfo.map((info) => {
-									return (
-										<Col key={info.Info.id}>
-											<Row>
-												<Col className='h5'>{info.value}</Col>
-											</Row>
-											<Row>
-												<Col>{info.Info.name}</Col>
-											</Row>
-										</Col>
-									);
-								})}
-							</Row>
-							<hr />
-							{player.PlayerAttributes.length > 0 && (
+								{player.PlayerAttributes.length > 0 && (
 								<>
 									<Row>
 										{player.PlayerAttributes.map((attr) => (
@@ -418,6 +404,20 @@ export default function PlayerManager(props: PlayerManagerProps) {
 											</Col>
 										))}
 									</Row>
+							<hr />
+							{player.PlayerInfo.map((info) => {
+									return (
+										<Col key={info.Info.id}>
+											<Row>
+												<Col className='h5'>{info.value}</Col>
+											</Row>
+											<Row>
+												<Col>{info.Info.name}</Col>
+											</Row>
+										</Col>
+									);
+								})}
+							</Row>
 									<hr />
 								</>
 							)}
