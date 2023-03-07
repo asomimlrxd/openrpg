@@ -109,10 +109,6 @@ async function getSSP(ctx: GetServerSidePropsContext) {
 				name: true,
 				maxLoad: true,
 				spellSlots: true,
-				PlayerInfo: {
-					select: { Info: true, value: true },
-					where: { Info: { visibleToAdmin: true } },
-				},
 				PlayerAttributeStatus: { select: { AttributeStatus: true, value: true } },
 				PlayerAttributes: {
 					select: { Attribute: true, value: true, maxValue: true },
@@ -136,6 +132,10 @@ async function getSSP(ctx: GetServerSidePropsContext) {
 				PlayerCurrency: {
 					select: { Currency: true, value: true },
 					where: { Currency: { visibleToAdmin: true } },
+				},
+				PlayerInfo: {
+					select: { Info: true, value: true },
+					where: { Info: { visibleToAdmin: true } },
 				},
 			},
 		}),
