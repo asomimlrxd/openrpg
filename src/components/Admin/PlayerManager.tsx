@@ -43,10 +43,6 @@ type Player = {
 	name: string;
 	maxLoad: number;
 	spellSlots: number;
-	PlayerInfo: {
-		Info: Info;
-		value: string;
-	}[];
 	PlayerAttributeStatus: {
 		AttributeStatus: AttributeStatus;
 		value: boolean;
@@ -87,6 +83,10 @@ type Player = {
 	}[];
 	PlayerSpell: {
 		Spell: Spell;
+	}[];
+	PlayerInfo: {
+		Info: Info;
+		value: string;
 	}[];
 };
 
