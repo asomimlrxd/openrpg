@@ -378,6 +378,7 @@ export default function PlayerManager(props: PlayerManagerProps) {
 									})}
 								/>
 							</Row>
+							<hr />
 							<Row className='mt-2'>
 								<Col>
 									<Row>
