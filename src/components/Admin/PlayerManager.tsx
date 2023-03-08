@@ -379,6 +379,27 @@ export default function PlayerManager(props: PlayerManagerProps) {
 								/>
 							</Row>
 							<hr />
+							{player.PlayerAttributes.length > 0 && (
+								<>
+									<Row>
+										{player.PlayerAttributes.map((attr) => (
+											<Col key={attr.Attribute.id}>
+												<Row>
+													<Col
+														className='h5'
+														style={{ color: `#${attr.Attribute.color}` }}>
+														{attr.value}/{attr.maxValue}
+													</Col>
+												</Row>
+												<Row>
+													<Col>{attr.Attribute.name}</Col>
+												</Row>
+											</Col>
+										))}
+									</Row>
+							<hr />
+								</>
+							)}
 							<Row className='mt-2'>
 								<Col>
 									<Row>
@@ -402,27 +423,6 @@ export default function PlayerManager(props: PlayerManagerProps) {
 								})}
 							</Row>
 							<hr />
-							{player.PlayerAttributes.length > 0 && (
-								<>
-									<Row>
-										{player.PlayerAttributes.map((attr) => (
-											<Col key={attr.Attribute.id}>
-												<Row>
-													<Col
-														className='h5'
-														style={{ color: `#${attr.Attribute.color}` }}>
-														{attr.value}/{attr.maxValue}
-													</Col>
-												</Row>
-												<Row>
-													<Col>{attr.Attribute.name}</Col>
-												</Row>
-											</Col>
-										))}
-									</Row>
-									<hr />
-								</>
-							)}
 							{player.PlayerSpec.length > 0 && (
 								<>
 									<Row>
