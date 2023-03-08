@@ -272,15 +272,16 @@ export default function PlayerManager(props: PlayerManagerProps) {
 		socket.on('playerAttributeStatusChange', (playerId, id, value) =>
 			dispatch({ type: 'updateAttributeStatus', data: [playerId, id, value] })
 		);
+		socket.on('playerAttributeChange', (playerId, id, value, maxValue) =>
+			dispatch({ type: 'updateAttribute', data: [playerId, id, value, maxValue, false] })
+		);
 		socket.on('playerNameChange', (playerId, value) =>
 			dispatch({ type: 'updateName', data: [playerId, value] })
 		);
 		socket.on('playerInfoChange', (playerId, infoId, value) =>
 			dispatch({ type: 'updateInfo', data: [playerId, infoId, value] })
 		);
-		socket.on('playerAttributeChange', (playerId, id, value, maxValue) =>
-			dispatch({ type: 'updateAttribute', data: [playerId, id, value, maxValue, false] })
-		);
+	
 		socket.on('playerSpecChange', (playerId, id, value) =>
 			dispatch({ type: 'updateSpec', data: [playerId, id, value] })
 		);
@@ -323,9 +324,9 @@ export default function PlayerManager(props: PlayerManagerProps) {
 
 		return () => {
 			socket.off('playerAttributeStatusChange');
+			socket.off('playerAttributeChange');
 			socket.off('playerNameChange');
 			socket.off('playerInfoChange');
-			socket.off('playerAttributeChange');
 			socket.off('playerSpecChange');
 			socket.off('playerCurrencyChange');
 			socket.off('playerCharacteristicChange');
