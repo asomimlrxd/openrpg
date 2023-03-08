@@ -93,9 +93,9 @@ type Player = {
 type PlayerManagerActions = {
 	delete: [playerId: number];
 	updateAttributeStatus: Parameters<PlayerAttributeStatusChangeEvent>;
+	updateAttribute: Parameters<PlayerAttributeChangeEvent>;
 	updateName: Parameters<PlayerNameChangeEvent>;
 	updateInfo: Parameters<PlayerInfoChangeEvent>;
-	updateAttribute: Parameters<PlayerAttributeChangeEvent>;
 	updateSpec: Parameters<PlayerSpecChangeEvent>;
 	updateCurrency: Parameters<PlayerCurrencyChangeEvent>;
 	updateCharacteristic: Parameters<PlayerCharacteristicChangeEvent>;
@@ -130,6 +130,16 @@ const PlayerManagerReducer: Reducer<Player[], ReducerActions<PlayerManagerAction
 			if (stat) stat.value = action.data[2];
 			break;
 		}
+		case 'updateAttribute': {
+			const attr = players[playerIndex].PlayerAttributes.find(
+				(a) => a.Attribute.id === action.data[1]
+			);
+			if (attr) {
+				attr.value = action.data[2];
+				attr.maxValue = action.data[3];
+			}
+			break;
+		}
 		case 'updateName':
 			players[playerIndex].name = action.data[1];
 			break;
@@ -141,16 +151,6 @@ const PlayerManagerReducer: Reducer<Player[], ReducerActions<PlayerManagerAction
 				info.value = action.data[2];
 			}
 			break;
-		case 'updateAttribute': {
-			const attr = players[playerIndex].PlayerAttributes.find(
-				(a) => a.Attribute.id === action.data[1]
-			);
-			if (attr) {
-				attr.value = action.data[2];
-				attr.maxValue = action.data[3];
-			}
-			break;
-		}
 		case 'updateSpec': {
 			const spec = players[playerIndex].PlayerSpec.find(
 				(s) => s.Spec.id === action.data[1]
