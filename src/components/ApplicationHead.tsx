@@ -12,7 +12,7 @@ export default function ApplicationHead({ title, children }: ApplicationHeadProp
 				name='description'
 				content='Website dedicado à criação da Ficha do RPG da Sunflower Studios!'
 			/>
-			<meta name='author' content='Sunflower Studios' />
+			<meta name='author' content='Alyssa Fernandes' />
 			<title>{`${title || ''} - Sunflower RPG`}</title>
 			{children}
 		</Head>
