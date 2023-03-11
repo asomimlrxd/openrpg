@@ -18,7 +18,7 @@ export default function internalServerError() {
 							500
 						</div>
 						<div className='d-inline-block ms-4 h4'>
-							Algo de errado aconteceu. Fala o mestre ou o chefão (Miguel claro).
+							Algo de errado aconteceu. Fala com o mestre ou o chefão (Miguel claro).
 						</div>
 						<div className='mt-3 h5'>
 							<Link href='/'>
