@@ -1,7 +1,7 @@
 $primary: #0d6efd;
 $secondary: #6c757d;
 @import 'bootstrap';
-@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;1,300&display=swap');
 
 @mixin theme-components($dark-theme) {
 	$background-color: #ffffff;
